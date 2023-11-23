@@ -11,14 +11,49 @@
     </style>
   </head>
   <body>
+    <h1>How to draw a line</h1>
     <canvas
       style="border: 1px solid red"
       width="250"
       height="250"
       id="hi"
     ></canvas>
+    <h1>How to draw a circle</h1>
+    <canvas
+      style="border: 1px solid red"
+      width="250"
+      height="250"
+      id="hi1"
+    ></canvas>
+    <h1>How to write something</h1>
+    <canvas
+      style="border: 1px solid red"
+      width="250"
+      height="250"
+      id="hi2"
+    ></canvas>
+    <p>
+      Check the console to understand this. Right click here and then inspect .
+      Then Elements
+    </p>
+
     <script>
-      var canvas = document.getElementById("hi");
+      // How to draw line
+      var c = document.getElementById("hi");
+      var ctx = c.getContext("2d");
+      ctx.moveTo(0, 0);
+      ctx.lineTo(200, 100);
+      ctx.stroke();
+
+      // How to draw circle
+      var c = document.getElementById("hi1");
+      var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+      ctx.stroke();
+      
+      // How to write letters
+      var canvas = document.getElementById("hi2");
       console.log(canvas);
       var ctx = canvas.getContext("2d");
       console.log(ctx);
